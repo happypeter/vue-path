@@ -1,6 +1,8 @@
 module.exports = {
+  head: [['link', { rel: 'icon', href: `/favicon.png` }]],
   title: 'Vue 路径',
-  description: 'Just playing around',
+  description: '基础加框架',
+
   themeConfig: {
     search: false,
     searchMaxSuggestions: 10,
