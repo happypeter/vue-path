@@ -1,5 +1,6 @@
+# 课程介绍
+
 * [peter](peter.md)
-* [intro](intro)
 * [vue-cli 搭建开发环境](cli.md)
 * [添加 Vue 组件 State](comp.md)
 * [state](state.md)
