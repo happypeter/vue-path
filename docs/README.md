@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /digi.png
+heroImage: /favicon.png
 actionText: 开始学习 →
 actionLink: /path/
 features:
@@ -12,7 +12,3 @@ features:
   details: 视频直观而信息完备，文字便于检索。
 footer:  Copyright © 2018-present Digicity
 ---
-
-### 迭代学习
-
-内容紧跟业界开发最新技术栈。
