@@ -6,6 +6,6 @@ module.exports = {
   themeConfig: {
     search: false,
     searchMaxSuggestions: 10,
-    nav: [{ text: '首页', link: '/' }, { text: '路径', link: '/guide/' }]
+    nav: [{ text: '首页', link: '/' }, { text: '路径', link: '/path/' }]
   }
 }
