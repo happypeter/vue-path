@@ -1,9 +1,8 @@
 # state
 
-
 显示两条评论在页面上。数据通过组件内的 state 来提供。参考[官方的列表渲染文档](https://cn.vuejs.org/v2/guide/list.html) 。
 
-### 添加 state
+## 添加 state
 
 CommentBox.vue
 
@@ -30,7 +29,7 @@ CommentBox.vue
 
 浏览器中，可以看到 state 显示到了页面上。
 
-### 显示一个评论列表
+## 显示一个评论列表
 
 CommentBox.vue
 
@@ -61,7 +60,7 @@ CommentBox.vue
 
 浏览器中，可以看到列表显示出来了。
 
-### 添加 v-bind:key
+## 添加 v-bind:key
 
 列表的每一个元素都要添加一个独立的 key 。不然可以看到编辑器中有语法错误提示。
 
@@ -86,11 +85,11 @@ CommentBox 中，
 
 CommentBox.vue 中，把 comments 数据改一下，添加 id 进来，把评论主体内容保存为 body 属性的值。
 
-到模板中，添加 v-bind:key 或者直接简写为 `:key` 即可。
+到模板中，添加 v-bind:key 或者直接简写为  `:key`  即可。
 
 这样，语法错误提示没有了。
 
-### 逆序显示评论
+## 逆序显示评论
 
 Vue 推荐用[计算属性](https://vuejs.org/v2/guide/computed.html)来进行对已有 data 的计算，而不要把计算过程直接写到模板中。
 
