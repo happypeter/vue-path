@@ -2,7 +2,7 @@
 
 本节来用 [json-server](https://github.com/typicode/json-server) 来搭建测试 API 。
 
-### 用 json-server 搭建 API
+## 用 json-server 搭建 API
 
 ```
 npm i -g json-server
@@ -34,11 +34,11 @@ cd api/
 json-server --watch db.json -p 3008
 ```
 
-进入 db.json 所在的文件夹，启动 json-server ，--watch 之后跟 db.json 文件名，然后 -p 之后跟端口号，这里使用3008做端口号。
+进入 db.json 所在的文件夹，启动 json-server ，--watch 之后跟 db.json 文件名，然后 -p 之后跟端口号，这里使用 3008 做端口号。
 
 浏览器中，访问 localhost:3008/comments 能够显示评论数组，访问 localhost:3008/comments/1 能够显示 id 为 1 的评论对象。这样表示 api server 就搭建好了。
 
-### 加载 api 数据
+## 加载 api 数据
 
 来用 api 提供的 comments 数组填充 vuex store 。
 
@@ -76,12 +76,10 @@ const mutations = {
 const actions = {
   loadComments({ commit }) {
     const uri = 'http://localhost:3008/comments'
-    axios.get(uri).then(
-      res => {
-        let comments = res.data
-        commit('loadComments', comments)
-      }
-    )
+    axios.get(uri).then(res => {
+      let comments = res.data
+      commit('loadComments', comments)
+    })
   }
 }
 ```

@@ -2,7 +2,7 @@
 
 把文章数据添加进来。
 
-### 读 API 数据
+## 读 API 数据
 
 db.json
 
@@ -51,12 +51,10 @@ const mutations = {
 const actions = {
   loadPosts({ commit }) {
     const uri = 'http://localhost:3008/posts'
-    axios.get(uri).then(
-      res => {
-        const posts = res.data
-        commit('loadPosts', posts)
-      }
-    )
+    axios.get(uri).then(res => {
+      const posts = res.data
+      commit('loadPosts', posts)
+    })
   }
 }
 
@@ -119,7 +117,7 @@ Home.vue 里面拿一下 store 的数据。
 
 浏览器中，可以看到 posts 数组显示出来了。
 
-### 显示列表
+## 显示列表
 
 Home.vue
 
@@ -135,7 +133,7 @@ posts 属性来显示成一个列表，取 post 的 id 为 key ，拿到每一�
 
 浏览器中，可以看到一个文章列表了。点开每一项都能看到文章页面。
 
-### 显示文章标题
+## 显示文章标题
 
 PostBody.vue
 

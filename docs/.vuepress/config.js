@@ -17,6 +17,24 @@ function toc() {
   return {
     '/git/': ['', 'intro'],
 
-    '/vuex-hello/': ['', '1-cli', '2-comp', '3-state']
+    '/vuex-hello/': [
+      '',
+      '1-cli',
+      '2-comp',
+      '3-state',
+      '4-method',
+      '5-prop',
+      '6-router',
+      '7-params',
+      '8-store',
+      '9-mutation',
+      '10-action',
+      '11-api',
+      '12-post',
+      '13-posts',
+      '14-if',
+      '15-rel',
+      '16-getter'
+    ]
   }
 }

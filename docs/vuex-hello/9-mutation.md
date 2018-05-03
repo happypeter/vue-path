@@ -2,7 +2,7 @@
 
 本节来修改 store 中的数据。
 
-### 添加 mutation
+## 添加 mutation
 
 Vue 修改 store 中的数据，要通过 mutation 来完成。
 
@@ -10,7 +10,7 @@ store/modules/comment.js
 
 ```js
 const mutations = {
-  addComment (state, comment) {
+  addComment(state, comment) {
     state.all.push(comment)
   }
 }
@@ -23,7 +23,7 @@ export default {
 
 定义 mutations 对象，里面的每一个成员函数就是一个 mutation ，这里来添加 addComment ，第一个参数是初始状态值 state ，首次执行时也就是上面我们定义的 state 对象。第二个参数是载荷数据，这里期待一个 comment 对象，muation 中的语句就是对初始状态值的修改操作，这里通过 push 把 comment 对象添加到了 state.all 中。对于学习过 redux 的朋友，需要注意的是这里不需要考虑不变性。
 
-### 呼叫 mutations
+## 呼叫 mutations
 
 这个就是到对应组件中，由用户去触发了。
 
@@ -39,7 +39,7 @@ CommentBox.vue
 
 浏览器中，可以看到评论发送成功了。
 
-### PostBody 中显示评论数量
+## PostBody 中显示评论数量
 
 PostBody.vue
 

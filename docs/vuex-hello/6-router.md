@@ -4,7 +4,7 @@
 
 添加[vue-router](https://router.vuejs.org/zh-cn/)。
 
-### 安装
+## 安装
 
 ```
 npm i vue-router
@@ -68,7 +68,7 @@ new Vue({
   router
 ```
 
-main.js 中导入配置，并且初始化 Vue 实例的时候来加载它。
+main.js 中导入配置，并且初始化 Vue 实例的时候来加载  它。
 
 App.vue
 
@@ -84,7 +84,7 @@ App.vue
 
 浏览器中，访问 / 可以看到 Home 组件，访问 /post 可以看到 Post 组件。
 
-### 去掉路由中的 hash
+## 去掉路由中的 hash
 
 vue-router 默认采用哈希路由，所以链接中会默认有哈希符。
 
@@ -98,7 +98,7 @@ router.js 的路由配置对象中，添加 mode history ，就会调用浏览�
 
 浏览器中，可以使用不带哈希符的链接了。
 
-### 使用链接
+## 使用链接
 
 Home.vue
 

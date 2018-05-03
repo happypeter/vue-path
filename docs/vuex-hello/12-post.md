@@ -1,9 +1,8 @@
 # 发评论
 
-
 本节来实现发布评论到服务器的功能。
 
-### 提交评论到服务器
+## 提交评论到服务器
 
 modules/comment.js
 
@@ -12,12 +11,10 @@ const actions = {
   addComment({ commit }, { comment }) {
     const { body } = comment
     const uri = 'http://localhost:3008/comments'
-    axios.post(uri, { body }).then(
-      res => {
-        console.log('res.data', res.data)
-      }
-    )
-  },
+    axios.post(uri, { body }).then(res => {
+      console.log('res.data', res.data)
+    })
+  }
 }
 ```
 
@@ -25,7 +22,7 @@ addComment Action 中，解构拿到评论内容 body ，axios 发 post 请求�
 
 浏览器中，执行发布评论操作。终端中打印出来的返回信息是一个包括 id 和 body 的对象。同时打开 db.json 可以看到这次提交的评论已经成功保存了。
 
-### 完善发送过程
+## 完善发送过程
 
 服务器会自动生成 id ，所以客户端代码中自己生成 id 的代码可以删除了。
 

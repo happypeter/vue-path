@@ -1,17 +1,16 @@
 # 使用 Getter 简化代码
 
-
 在 [vuex 官网](https://vuex.vuejs.org/zh-cn/) 可以看到 vuex 的五大概念，只有一个还没有讲，那就是 getter 。
 
-### 显示评论数
+## 显示评论数
 
 PostBody.vue
 
 ```js
-      commentCount() { 
+      commentCount() {
         return this.$store.state.comment.all.filter(
           t => t.post === this.postId
-        ).length 
+        ).length
       },
 ```
 
@@ -19,7 +18,7 @@ PostBody.vue
 
 浏览器中，可以看到评论数量显示正确了。
 
-### 代码移动到 getter
+## 代码移动到 getter
 
 这个筛选逻辑其实很多地方都会用到，重复去写，不仅维护成本高，而且代码也需要重复运算，浪费资源。
 
@@ -27,7 +26,7 @@ modules/comment.js
 
 ```js
 const getters = {
-  getComments: (state) => (id) => {
+  getComments: state => id => {
     return state.all.filter(t => t.post === id)
   }
 }
@@ -49,7 +48,7 @@ export default {
 CommentBox.vue
 
 ```js
-      comments() { 
+      comments() {
         return this.$store.getters.getComments(this.postId)
       },
 ```
@@ -59,8 +58,8 @@ CommentBox 来用一下，注意要传递 post id 作为参数。
 PostBody.vue
 
 ```js
-      commentCount() { 
-        return this.$store.getters.getComments(this.postId).length 
+      commentCount() {
+        return this.$store.getters.getComments(this.postId).length
       },
 ```
 

@@ -2,7 +2,7 @@
 
 评论应该从属于特定一篇文章。
 
-### 添加底层数据
+## 添加底层数据
 
 db.json
 
@@ -34,7 +34,7 @@ CommentBox.vue
 
 ```js
       postId() { return this.$route.params.id },
-      comments() { 
+      comments() {
         return this.$store.state.comment.all.filter(
           t => t.post === this.postId
         )
@@ -47,7 +47,7 @@ comments 运算属性中，现在要对评论进行筛选，只保留属于当�
 
 浏览器中，可以看到每篇文章只显示自己的评论了。
 
-### 提交评论
+## 提交评论
 
 CommentBox.vue
 
